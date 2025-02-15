@@ -1,0 +1,1 @@
+const backendURL = "https://Chat-app.up.railway.app"; // Replace with your actual URL

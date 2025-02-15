@@ -1,5 +1,5 @@
-const binId = "67b0f17ead19ca34f804ea72"; // Replace with your bin ID
-const apiKey = "$2a$10$elM1jsqJs0NHu4FsNQCJA.gSiIKgSYEtw22MWHmoRCBlg3S8yNU8m"; // Replace with your API key
+const binId = process.env.BinID || "67b0f17ead19ca34f804ea72"; // Replace with your bin ID
+const apiKey = process.env.APIKey || "$2a$10$elM1jsqJs0NHu4FsNQCJA.gSiIKgSYEtw22MWHmoRCBlg3S8yNU8m"; // Replace with your API key
 const binUrl = `https://api.jsonbin.io/v3/b/${binId}`;
 
 // Fetch messages from JSONBin.io
@@ -48,6 +48,6 @@ async function sendMessage() {
     fetchMessages(); // Refresh chat
 }
 
-// Auto-refresh messages every 3 seconds
-setInterval(fetchMessages, 3000);
+//  Auto-refresh messages every 3 seconds
+// setInterval(fetchMessages, 3000);
 fetchMessages();
